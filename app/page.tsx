@@ -14,10 +14,17 @@ import {
   Hammer,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+// Simple dropdown for language selection
+const languages = [
+  { code: "fr", label: "FR" },
+  { code: "ar", label: "AR" },
+  { code: "en", label: "EN" },
+]
 import { Card, CardContent } from "@/components/ui/card"
 // Removed DropdownMenu imports as it's no longer used
 
-type Language = "fr" | "ar"
+type Language = "fr" | "ar" | "en"
 
 interface Translations {
   fr: {
@@ -50,8 +57,20 @@ interface Translations {
         name: string
         address: string
       }
-    }
-  }
+      menzah5: {
+        name: string
+        address: string
+      }
+      mourouj: {
+        name: string
+        address: string
+      }
+      aouina: {
+        name: string
+        address: string
+      }
+   }
+  },
   ar: {
     maintenanceTitle: string
     maintenanceMessage: string
@@ -82,14 +101,72 @@ interface Translations {
         name: string
         address: string
       }
+      menzah5: {
+        name: string
+        address: string
+      }
+      mourouj: {
+        name: string
+        address: string
+      }
+      aouina: {
+        name: string
+        address: string
+      }
     }
-  }
+  },
+  en: {
+    maintenanceTitle: string
+    maintenanceMessage: string
+    maintenanceSubtitle: string
+    address: string
+    nearbyStores: string
+    nearbyStoresDesc: string
+    open: string
+    call: string
+    directions: string
+    location: string
+    locationDesc: string
+    inMaintenance: string
+    openStores: string
+    needHelp: string
+    needHelpDesc: string
+    contactUs: string
+    followUs: string
+    rightsReserved: string
+    patienceMessage: string
+    backSoon: string
+    stores: {
+      centreville: {
+        name: string
+        address: string
+      }
+      lepassage: {
+        name: string
+        address: string
+      }
+            menzah5: {
+        name: string
+        address: string
+      }
+      mourouj: {
+        name: string
+        address: string
+      }
+      aouina: {
+        name: string
+        address: string
+      }
+    }
+  },
+  
+
 }
 
 const translations: Translations = {
   fr: {
-    maintenanceTitle: "🚧 Notre boutique est actuellement en maintenance",
-    maintenanceMessage: "La Boutique du Parc est temporairement fermée",
+    maintenanceTitle: "🚧 La Boutique du Parc est temporairement fermée",
+    maintenanceMessage: "Notre boutique est actuellement en maintenance",
     maintenanceSubtitle: "Merci de votre patience",
     address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
     nearbyStores: "Boutiques à proximité",
@@ -117,11 +194,23 @@ const translations: Translations = {
         name: "Boutique Le Passage",
         address: "52, Rue de Paris, Tunis",
       },
+      menzah5: {
+        name: "Boutique du Menzah 5",
+        address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
+      },
+      mourouj: {
+        name: "Boutique El Mourouj",
+        address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
+      },
+      aouina: {
+        name: "Boutique El Aouina",
+        address: "5, Résidence Soltan, El Aouina, Tunis 4216",
+      },
     },
   },
   ar: {
-    maintenanceTitle: "🚧 البوتيك مسكّرة مؤقتاً للصيانة",
-    maintenanceMessage: "بوتيك الحديقة حالياً في فترة صيانة",
+    maintenanceTitle:"🚧 بوتيك الحديقة حالياً في فترة صيانة",
+    maintenanceMessage: "البوتيك مغلقة مؤقتاً للصيانة",
     maintenanceSubtitle: "شكراً على تفهّمكم وصبركم 🙏",
     address: "نهج العربيّة السعوديّة، مونبليزير، تونس 1073",
     nearbyStores: "البوتيكات القريبة ليك",
@@ -133,7 +222,7 @@ const translations: Translations = {
     locationDesc: "خريطة فيها جميع البوتيكات متاعنا",
     inMaintenance: "في الصيانة",
     openStores: "البوتيكات اللي تخدم",
-    needHelp: "تلزمك معونة؟",
+    needHelp: "تحتاجون لمزيد من التفاصيل؟",
     needHelpDesc: "الفريق متاعنا موجود ديما يعاونك",
     contactUs: "إتصل بينا توة",
     followUs: "تابعنا على صفحاتنا",
@@ -149,13 +238,71 @@ const translations: Translations = {
         name: "بوتيك الباساج",
         address: "52، شارع باريس، تونس",
       },
+      menzah5: {
+        name: "بوتيك المنزه 5",
+        address: "نهج إفريقيا، المنزه 5، أريانة 2091",
+      },
+      mourouj: {
+        name: "بوتيك المروج",
+        address: "شارع 20 مارس، المروج، تونس 2074",
+      },
+      aouina: {
+        name: "بوتيك العوينة",
+        address: "إقامة سلطان 5، العوينة، تونس 4216",
+      },
     },
   },
+  en: {
+    maintenanceTitle: "🚧 The Parc Store is temporarily closed",
+    maintenanceMessage: "Our store is currently under maintenance",
+    maintenanceSubtitle: "Thank you for your patience",
+    address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
+    nearbyStores: "Nearby Stores",
+    nearbyStoresDesc: "Find our other open outlets",
+    open: "Open",
+    call: "Call",
+    directions: "Directions",
+    location: "Location",
+    locationDesc: "All our stores on the map",
+    inMaintenance: "Under maintenance",
+    openStores: "Open stores",
+    needHelp: "Need help?",
+    needHelpDesc: "Our team is here to assist you",
+    contactUs: "Contact us",
+    followUs: "Follow us",
+    rightsReserved: "© 2025 Taraji Store. All rights reserved.",
+    patienceMessage: "We are working hard to offer you a better experience",
+    backSoon: "We will be back soon!",
+    stores: {
+      centreville: {
+        name: "Centre Ville Store",
+        address: "6, Avenue de Carthage, Tunis 1000",
+      },
+      lepassage: {
+        name: "Le Passage Store",
+        address: "52, Rue de Paris, Tunis",
+      },
+      menzah5: {
+        name: "Boutique du Menzah 5",
+        address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
+      },
+      mourouj: {
+        name: "Boutique El Mourouj",
+        address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
+      },
+      aouina: {
+        name: "Boutique El Aouina",
+        address: "5, Résidence Soltan, El Aouina, Tunis 4216",
+      },
+    },
+  },
+  
 }
 
 export default function MaintenancePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [language, setLanguage] = useState<Language>("fr")
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false)
   const [animateConstruction, setAnimateConstruction] = useState(false)
 
   const t = translations[language]
@@ -173,15 +320,36 @@ export default function MaintenancePage() {
     {
       name: t.stores.centreville.name,
       address: t.stores.centreville.address,
-      phone: "+216 71 123 456",
+      phone: "+216 93 691 919",
       distance: "2.5 km",
       status: t.open,
     },
     {
       name: t.stores.lepassage.name,
       address: t.stores.lepassage.address,
-      phone: "+216 71 789 012",
+      phone: "+216 95 321 919",
       distance: "3.1 km",
+      status: t.open,
+    },
+    {
+      name: t.stores.menzah5.name,
+      address: t.stores.menzah5.address,
+      phone: "+216 92 861 919",
+      distance: "4.2 km",
+      status: t.open,
+    },
+        {
+      name: t.stores.mourouj.name,
+      address: t.stores.mourouj.address,
+      phone: "+216 94 871 919",
+      distance: "7.5 km",
+      status: t.open,
+    },
+    {
+      name: t.stores.aouina.name,
+      address: t.stores.aouina.address,
+      phone: "+216 98 813 918",
+      distance: "10.1 km",
       status: t.open,
     },
   ]
@@ -194,8 +362,10 @@ export default function MaintenancePage() {
     window.open(`https://maps.google.com/?q=${encodeURIComponent(address)}`)
   }
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "fr" ? "ar" : "fr"))
+
+  const handleLanguageSelect = (lang: Language) => {
+    setLanguage(lang)
+    setLangDropdownOpen(false)
   }
 
   return (
@@ -217,17 +387,41 @@ export default function MaintenancePage() {
         </div>
       </header>
 
-      {/* Sélecteur de langue fixe (bouton simple) */}
+      {/* Sélecteur de langue en dropdown */}
       <div className="fixed top-4 right-4 z-50">
-        <Button
-          onClick={toggleLanguage}
-          variant="outline"
-          size="sm"
-          className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black bg-transparent text-xs px-3 py-1 h-8 shadow-lg"
-        >
-          <Globe className="w-3 h-3 mr-1" />
-          {language === "fr" ? "عربي" : "FR"}
-        </Button>
+        <div className="relative">
+          <Button
+            onClick={() => setLangDropdownOpen((open) => !open)}
+            variant="outline"
+            size="sm"
+            className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black bg-transparent text-xs px-1 py-1 h-8 shadow-lg flex items-center"
+            aria-haspopup="listbox"
+            aria-expanded={langDropdownOpen}
+          >
+            <Globe className="w-2 h-3 mr-1" />
+            {languages.find((l) => l.code === language)?.label}
+            <svg className="ml-1 w-2 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </Button>
+
+          {langDropdownOpen && (
+            <ul
+              className="absolute right-0 mt-2 w-16 bg-white border border-gray-200 rounded-lg shadow-lg z-50 text-xs"
+              role="listbox"
+            >
+              {languages.map((lang) => (
+                <li
+                  key={lang.code}
+                  className={`px-6 py-2 cursor-pointer hover:bg-yellow-100 ${lang.code === language ? "font-bold text-yellow-600" : "text-gray-700"}`}
+                  onClick={() => handleLanguageSelect(lang.code as Language)}
+                  role="option"
+                  aria-selected={lang.code === language}
+                >
+                  {lang.label}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
 
       <main className="px-4 pb-8">
@@ -241,11 +435,11 @@ export default function MaintenancePage() {
               <div className="mb-6">
                 <div className="relative w-24 h-24 mx-auto mb-4">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-2xl">
-                    <div
-                      className={`transition-transform duration-500 ${animateConstruction ? "rotate-12" : "rotate-0"}`}
-                    >
-                      <HardHat className="w-12 h-12 text-red-600" />
-                    </div>
+                    <img
+                      src="/images/excavator.png"
+                      alt="Construction Helmet"
+                      className={`w-12 h-12 transition-transform duration-500 ${animateConstruction ? "rotate-12" : "rotate-0"}`}
+                    />
                   </div>
                   {/* Éléments décoratifs animés */}
                   <div
@@ -356,7 +550,7 @@ export default function MaintenancePage() {
           </div>
         </section>
 
-        {/* Carte interactive */}
+        {/* Carte interactive 
         <section
           className={`mt-8 transition-all duration-1000 delay-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
@@ -380,7 +574,7 @@ export default function MaintenancePage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
 
-                {/* Légende de la carte */}
+                
                 <div
                   className={`absolute top-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg ${isRTL ? "right-4" : "left-4"}`}
                 >
@@ -399,6 +593,7 @@ export default function MaintenancePage() {
             </CardContent>
           </Card>
         </section>
+        */}
 
         {/* Call-to-action */}
         <section
@@ -409,7 +604,7 @@ export default function MaintenancePage() {
               <h3 className="font-bold text-black text-lg mb-2">{t.needHelp}</h3>
               <p className="text-black/80 text-sm mb-4">{t.needHelpDesc}</p>
               <Button
-                onClick={() => handleCall("+216 71 906 499")}
+                onClick={() => handleCall("+216 98 812 219")}
                 className="bg-black text-white hover:bg-gray-800 rounded-xl h-12 px-6 font-medium transition-all duration-200 hover:scale-105 active:scale-95"
               >
                 {t.contactUs}
