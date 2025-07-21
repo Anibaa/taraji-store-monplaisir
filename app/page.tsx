@@ -14,10 +14,17 @@ import {
   Hammer,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+// Simple dropdown for language selection
+const languages = [
+  { code: "fr", label: "Fr" },
+  { code: "ar", label: "Ar" },
+  { code: "en", label: "En" },
+]
 import { Card, CardContent } from "@/components/ui/card"
 // Removed DropdownMenu imports as it's no longer used
 
-type Language = "fr" | "ar"
+type Language = "fr" | "ar" | "en"
 
 interface Translations {
   fr: {
@@ -83,13 +90,47 @@ interface Translations {
         address: string
       }
     }
-  }
+  },
+  en: {
+    maintenanceTitle: string
+    maintenanceMessage: string
+    maintenanceSubtitle: string
+    address: string
+    nearbyStores: string
+    nearbyStoresDesc: string
+    open: string
+    call: string
+    directions: string
+    location: string
+    locationDesc: string
+    inMaintenance: string
+    openStores: string
+    needHelp: string
+    needHelpDesc: string
+    contactUs: string
+    followUs: string
+    rightsReserved: string
+    patienceMessage: string
+    backSoon: string
+    stores: {
+      centreville: {
+        name: string
+        address: string
+      }
+      lepassage: {
+        name: string
+        address: string
+      }
+    }
+  },
+  
+
 }
 
 const translations: Translations = {
   fr: {
-    maintenanceTitle: "🚧 Notre boutique est actuellement en maintenance",
-    maintenanceMessage: "La Boutique du Parc est temporairement fermée",
+    maintenanceTitle: "🚧 La Boutique du Parc est temporairement fermée",
+    maintenanceMessage: "Notre boutique est actuellement en maintenance",
     maintenanceSubtitle: "Merci de votre patience",
     address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
     nearbyStores: "Boutiques à proximité",
@@ -120,8 +161,8 @@ const translations: Translations = {
     },
   },
   ar: {
-    maintenanceTitle: "🚧 البوتيك مسكّرة مؤقتاً للصيانة",
-    maintenanceMessage: "بوتيك الحديقة حالياً في فترة صيانة",
+    maintenanceTitle:"🚧 بوتيك الحديقة حالياً في فترة صيانة",
+    maintenanceMessage: "البوتيك مسكّرة مؤقتاً للصيانة",
     maintenanceSubtitle: "شكراً على تفهّمكم وصبركم 🙏",
     address: "نهج العربيّة السعوديّة، مونبليزير، تونس 1073",
     nearbyStores: "البوتيكات القريبة ليك",
@@ -151,11 +192,45 @@ const translations: Translations = {
       },
     },
   },
+  en: {
+    maintenanceTitle: "🚧 The Parc Store is temporarily closed",
+    maintenanceMessage: "Our store is currently under maintenance",
+    maintenanceSubtitle: "Thank you for your patience",
+    address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
+    nearbyStores: "Nearby Stores",
+    nearbyStoresDesc: "Find our other open outlets",
+    open: "Open",
+    call: "Call",
+    directions: "Directions",
+    location: "Location",
+    locationDesc: "All our stores on the map",
+    inMaintenance: "Under maintenance",
+    openStores: "Open stores",
+    needHelp: "Need help?",
+    needHelpDesc: "Our team is here to assist you",
+    contactUs: "Contact us",
+    followUs: "Follow us",
+    rightsReserved: "© 2025 Taraji Store. All rights reserved.",
+    patienceMessage: "We are working hard to offer you a better experience",
+    backSoon: "We will be back soon!",
+    stores: {
+      centreville: {
+        name: "Centre Ville Store",
+        address: "6, Avenue de Carthage, Tunis 1000",
+      },
+      lepassage: {
+        name: "Le Passage Store",
+        address: "52, Rue de Paris, Tunis",
+      },
+    },
+  },
+  
 }
 
 export default function MaintenancePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [language, setLanguage] = useState<Language>("fr")
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false)
   const [animateConstruction, setAnimateConstruction] = useState(false)
 
   const t = translations[language]
@@ -194,8 +269,10 @@ export default function MaintenancePage() {
     window.open(`https://maps.google.com/?q=${encodeURIComponent(address)}`)
   }
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "fr" ? "ar" : "fr"))
+
+  const handleLanguageSelect = (lang: Language) => {
+    setLanguage(lang)
+    setLangDropdownOpen(false)
   }
 
   return (
@@ -217,17 +294,41 @@ export default function MaintenancePage() {
         </div>
       </header>
 
-      {/* Sélecteur de langue fixe (bouton simple) */}
+      {/* Sélecteur de langue en dropdown */}
       <div className="fixed top-4 right-4 z-50">
-        <Button
-          onClick={toggleLanguage}
-          variant="outline"
-          size="sm"
-          className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black bg-transparent text-xs px-3 py-1 h-8 shadow-lg"
-        >
-          <Globe className="w-3 h-3 mr-1" />
-          {language === "fr" ? "عربي" : "FR"}
-        </Button>
+        <div className="relative">
+          <Button
+            onClick={() => setLangDropdownOpen((open) => !open)}
+            variant="outline"
+            size="sm"
+            className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black bg-transparent text-xs px-1 py-1 h-8 shadow-lg flex items-center"
+            aria-haspopup="listbox"
+            aria-expanded={langDropdownOpen}
+          >
+            <Globe className="w-2 h-3 mr-1" />
+            {languages.find((l) => l.code === language)?.label}
+            <svg className="ml-1 w-2 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </Button>
+          
+          {langDropdownOpen && (
+            <ul
+              className="absolute right-0 mt-2 w-16 bg-white border border-gray-200 rounded-lg shadow-lg z-50 text-xs"
+              role="listbox"
+            >
+              {languages.map((lang) => (
+                <li
+                  key={lang.code}
+                  className={`px-4 py-2 cursor-pointer hover:bg-yellow-100 ${lang.code === language ? "font-bold text-yellow-600" : "text-gray-700"}`}
+                  onClick={() => handleLanguageSelect(lang.code as Language)}
+                  role="option"
+                  aria-selected={lang.code === language}
+                >
+                  {lang.label}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
 
       <main className="px-4 pb-8">
@@ -241,11 +342,11 @@ export default function MaintenancePage() {
               <div className="mb-6">
                 <div className="relative w-24 h-24 mx-auto mb-4">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-2xl">
-                    <div
-                      className={`transition-transform duration-500 ${animateConstruction ? "rotate-12" : "rotate-0"}`}
-                    >
-                      <HardHat className="w-12 h-12 text-red-600" />
-                    </div>
+                    <img
+                      src="/images/excavator.png"
+                      alt="Construction Helmet"
+                      className={`w-12 h-12 transition-transform duration-500 ${animateConstruction ? "rotate-12" : "rotate-0"}`}
+                    />
                   </div>
                   {/* Éléments décoratifs animés */}
                   <div
