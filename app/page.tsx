@@ -17,9 +17,9 @@ import { Button } from "@/components/ui/button"
 
 // Simple dropdown for language selection
 const languages = [
-  { code: "fr", label: "Fr" },
-  { code: "ar", label: "Ar" },
-  { code: "en", label: "En" },
+  { code: "fr", label: "FR" },
+  { code: "ar", label: "AR" },
+  { code: "en", label: "EN" },
 ]
 import { Card, CardContent } from "@/components/ui/card"
 // Removed DropdownMenu imports as it's no longer used
@@ -162,7 +162,7 @@ const translations: Translations = {
   },
   ar: {
     maintenanceTitle:"🚧 بوتيك الحديقة حالياً في فترة صيانة",
-    maintenanceMessage: "البوتيك مسكّرة مؤقتاً للصيانة",
+    maintenanceMessage: "البوتيك مغلقة مؤقتاً للصيانة",
     maintenanceSubtitle: "شكراً على تفهّمكم وصبركم 🙏",
     address: "نهج العربيّة السعوديّة، مونبليزير، تونس 1073",
     nearbyStores: "البوتيكات القريبة ليك",
@@ -174,7 +174,7 @@ const translations: Translations = {
     locationDesc: "خريطة فيها جميع البوتيكات متاعنا",
     inMaintenance: "في الصيانة",
     openStores: "البوتيكات اللي تخدم",
-    needHelp: "تلزمك معونة؟",
+    needHelp: "تحتاجون لمزيد من التفاصيل؟",
     needHelpDesc: "الفريق متاعنا موجود ديما يعاونك",
     contactUs: "إتصل بينا توة",
     followUs: "تابعنا على صفحاتنا",
@@ -309,7 +309,7 @@ export default function MaintenancePage() {
             {languages.find((l) => l.code === language)?.label}
             <svg className="ml-1 w-2 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </Button>
-          
+
           {langDropdownOpen && (
             <ul
               className="absolute right-0 mt-2 w-16 bg-white border border-gray-200 rounded-lg shadow-lg z-50 text-xs"
