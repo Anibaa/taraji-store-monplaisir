@@ -57,8 +57,20 @@ interface Translations {
         name: string
         address: string
       }
-    }
-  }
+      menzah5: {
+        name: string
+        address: string
+      }
+      mourouj: {
+        name: string
+        address: string
+      }
+      aouina: {
+        name: string
+        address: string
+      }
+   }
+  },
   ar: {
     maintenanceTitle: string
     maintenanceMessage: string
@@ -86,6 +98,18 @@ interface Translations {
         address: string
       }
       lepassage: {
+        name: string
+        address: string
+      }
+      menzah5: {
+        name: string
+        address: string
+      }
+      mourouj: {
+        name: string
+        address: string
+      }
+      aouina: {
         name: string
         address: string
       }
@@ -118,6 +142,18 @@ interface Translations {
         address: string
       }
       lepassage: {
+        name: string
+        address: string
+      }
+            menzah5: {
+        name: string
+        address: string
+      }
+      mourouj: {
+        name: string
+        address: string
+      }
+      aouina: {
         name: string
         address: string
       }
@@ -158,6 +194,18 @@ const translations: Translations = {
         name: "Boutique Le Passage",
         address: "52, Rue de Paris, Tunis",
       },
+      menzah5: {
+        name: "Boutique du Menzah 5",
+        address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
+      },
+      mourouj: {
+        name: "Boutique El Mourouj",
+        address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
+      },
+      aouina: {
+        name: "Boutique El Aouina",
+        address: "5, Résidence Soltan, El Aouina, Tunis 4216",
+      },
     },
   },
   ar: {
@@ -189,6 +237,18 @@ const translations: Translations = {
       lepassage: {
         name: "بوتيك الباساج",
         address: "52، شارع باريس، تونس",
+      },
+      menzah5: {
+        name: "بوتيك المنزه 5",
+        address: "نهج إفريقيا، المنزه 5، أريانة 2091",
+      },
+      mourouj: {
+        name: "بوتيك المروج",
+        address: "شارع 20 مارس، المروج، تونس 2074",
+      },
+      aouina: {
+        name: "بوتيك العوينة",
+        address: "إقامة سلطان 5، العوينة، تونس 4216",
       },
     },
   },
@@ -222,6 +282,18 @@ const translations: Translations = {
         name: "Le Passage Store",
         address: "52, Rue de Paris, Tunis",
       },
+      menzah5: {
+        name: "Boutique du Menzah 5",
+        address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
+      },
+      mourouj: {
+        name: "Boutique El Mourouj",
+        address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
+      },
+      aouina: {
+        name: "Boutique El Aouina",
+        address: "5, Résidence Soltan, El Aouina, Tunis 4216",
+      },
     },
   },
   
@@ -248,15 +320,36 @@ export default function MaintenancePage() {
     {
       name: t.stores.centreville.name,
       address: t.stores.centreville.address,
-      phone: "+216 71 123 456",
+      phone: "+216 93 691 919",
       distance: "2.5 km",
       status: t.open,
     },
     {
       name: t.stores.lepassage.name,
       address: t.stores.lepassage.address,
-      phone: "+216 71 789 012",
+      phone: "+216 95 321 919",
       distance: "3.1 km",
+      status: t.open,
+    },
+    {
+      name: t.stores.menzah5.name,
+      address: t.stores.menzah5.address,
+      phone: "+216 92 861 919",
+      distance: "4.2 km",
+      status: t.open,
+    },
+        {
+      name: t.stores.mourouj.name,
+      address: t.stores.mourouj.address,
+      phone: "+216 94 871 919",
+      distance: "7.5 km",
+      status: t.open,
+    },
+    {
+      name: t.stores.aouina.name,
+      address: t.stores.aouina.address,
+      phone: "+216 98 813 918",
+      distance: "10.1 km",
       status: t.open,
     },
   ]
@@ -318,7 +411,7 @@ export default function MaintenancePage() {
               {languages.map((lang) => (
                 <li
                   key={lang.code}
-                  className={`px-4 py-2 cursor-pointer hover:bg-yellow-100 ${lang.code === language ? "font-bold text-yellow-600" : "text-gray-700"}`}
+                  className={`px-6 py-2 cursor-pointer hover:bg-yellow-100 ${lang.code === language ? "font-bold text-yellow-600" : "text-gray-700"}`}
                   onClick={() => handleLanguageSelect(lang.code as Language)}
                   role="option"
                   aria-selected={lang.code === language}
@@ -457,7 +550,7 @@ export default function MaintenancePage() {
           </div>
         </section>
 
-        {/* Carte interactive */}
+        {/* Carte interactive 
         <section
           className={`mt-8 transition-all duration-1000 delay-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
@@ -481,7 +574,7 @@ export default function MaintenancePage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
 
-                {/* Légende de la carte */}
+                
                 <div
                   className={`absolute top-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg ${isRTL ? "right-4" : "left-4"}`}
                 >
@@ -500,6 +593,7 @@ export default function MaintenancePage() {
             </CardContent>
           </Card>
         </section>
+        */}
 
         {/* Call-to-action */}
         <section
@@ -510,7 +604,7 @@ export default function MaintenancePage() {
               <h3 className="font-bold text-black text-lg mb-2">{t.needHelp}</h3>
               <p className="text-black/80 text-sm mb-4">{t.needHelpDesc}</p>
               <Button
-                onClick={() => handleCall("+216 71 906 499")}
+                onClick={() => handleCall("+216 98 812 219")}
                 className="bg-black text-white hover:bg-gray-800 rounded-xl h-12 px-6 font-medium transition-all duration-200 hover:scale-105 active:scale-95"
               >
                 {t.contactUs}
