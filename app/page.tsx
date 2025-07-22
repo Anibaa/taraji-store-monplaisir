@@ -165,19 +165,19 @@ interface Translations {
 
 const translations: Translations = {
   fr: {
-    maintenanceTitle: "🚧 La Boutique du Parc est temporairement fermée",
-    maintenanceMessage: "Notre boutique est actuellement en maintenance",
+    maintenanceTitle: "🚧 Le Point de Vente du Parc B est temporairement fermé",
+    maintenanceMessage: "Notre point de vente est actuellement en maintenance",
     maintenanceSubtitle: "Merci de votre patience",
     address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
-    nearbyStores: "Boutiques à proximité",
+    nearbyStores: "Points de vente à proximité",
     nearbyStoresDesc: "Trouvez nos autres points de vente ouverts",
-    open: "Ouverte",
+    open: "Ouvert",
     call: "Appeler",
     directions: "Itinéraire",
     location: "Localisation",
-    locationDesc: "Toutes nos boutiques sur la carte",
+    locationDesc: "Tous nos points de vente sur la carte",
     inMaintenance: "En maintenance",
-    openStores: "Ouvertes",
+    openStores: "Ouverts",
     needHelp: "Besoin d'aide ?",
     needHelpDesc: "Notre équipe est là pour vous accompagner",
     contactUs: "Nous contacter",
@@ -187,115 +187,117 @@ const translations: Translations = {
     backSoon: "Nous reviendrons bientôt !",
     stores: {
       centreville: {
-        name: "Boutique Centre Ville",
+        name: "Point de Vente Centre Ville",
         address: "6, Avenue de Carthage, Tunis 1000",
       },
       lepassage: {
-        name: "Boutique Le Passage",
+        name: "Point de Vente Le Passage",
         address: "52, Rue de Paris, Tunis",
       },
       menzah5: {
-        name: "Boutique du Menzah 5",
+        name: "Point de Vente du Menzah 5",
         address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
       },
       mourouj: {
-        name: "Boutique El Mourouj",
+        name: "Point de Vente El Mourouj",
         address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
       },
       aouina: {
-        name: "Boutique El Aouina",
+        name: "Point de Vente El Aouina",
         address: "5, Résidence Soltan, El Aouina, Tunis 4216",
       },
     },
   },
+
   ar: {
-    maintenanceTitle:"🚧 بوتيك الحديقة حالياً في فترة صيانة",
-    maintenanceMessage: "البوتيك مغلقة مؤقتاً للصيانة",
+    maintenanceTitle:"🚧 نقطة البيع الحديقة ب حالياً في فترة صيانة",
+    maintenanceMessage: "نقطة البيع مسكّرة مؤقتاً للصيانة",
     maintenanceSubtitle: "شكراً على تفهّمكم وصبركم 🙏",
     address: "نهج العربيّة السعوديّة، مونبليزير، تونس 1073",
-    nearbyStores: "البوتيكات القريبة ليك",
+    nearbyStores: "نقاط البيع القريبة ليك",
     nearbyStoresDesc: "تنجم تلقى أقرب نقطة بيع مفتوحة",
     open: "مفتوحة",
     call: "إتصل بينا",
     directions: "شوف الطريق",
     location: "المكان",
-    locationDesc: "خريطة فيها جميع البوتيكات متاعنا",
+    locationDesc: "خريطة فيها جميع نقاط البيع متاعنا",
     inMaintenance: "في الصيانة",
-    openStores: "البوتيكات اللي تخدم",
+    openStores: "نقاط البيع اللي تخدم",
     needHelp: "تحتاجون لمزيد من التفاصيل؟",
     needHelpDesc: "الفريق متاعنا موجود ديما يعاونك",
     contactUs: "إتصل بينا توة",
     followUs: "تابعنا على صفحاتنا",
-    rightsReserved: "© 2025 بوتيك الترجي. جميع الحقوق محفوظة.",
+    rightsReserved: "© 2025 Taraji Store. جميع الحقوق محفوظة.",
     patienceMessage: "نحضّرو في حاجة تفرّح و تليق بيكم ❤️",
     backSoon: "راجعينلكم قريب إن شاء الله !",
     stores: {
       centreville: {
-        name: "بوتيك وسط العاصمة",
+        name: "نقطة بيع وسط العاصمة",
         address: "6، شارع قرطاج، تونس 1000",
       },
       lepassage: {
-        name: "بوتيك الباساج",
+        name: "نقطة بيع الباساج",
         address: "52، شارع باريس، تونس",
       },
       menzah5: {
-        name: "بوتيك المنزه 5",
+        name: "نقطة بيع المنزه 5",
         address: "نهج إفريقيا، المنزه 5، أريانة 2091",
       },
       mourouj: {
-        name: "بوتيك المروج",
+        name: "نقطة بيع المروج",
         address: "شارع 20 مارس، المروج، تونس 2074",
       },
       aouina: {
-        name: "بوتيك العوينة",
+        name: "نقطة بيع العوينة",
         address: "إقامة سلطان 5، العوينة، تونس 4216",
       },
     },
   },
+
   en: {
-    maintenanceTitle: "🚧 The Parc Store is temporarily closed",
-    maintenanceMessage: "Our store is currently under maintenance",
+    maintenanceTitle: "🚧 The Park B Point of Sale is temporarily closed",
+    maintenanceMessage: "Our point of sale is currently under maintenance",
     maintenanceSubtitle: "Thank you for your patience",
-    address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
-    nearbyStores: "Nearby Stores",
-    nearbyStoresDesc: "Find our other open outlets",
+    address: "Avenue of Saudi Arabia, Montplaisir, Tunis 1073",
+    nearbyStores: "Nearby Points of Sale",
+    nearbyStoresDesc: "Find our other open points of sale",
     open: "Open",
     call: "Call",
-    directions: "Directions",
+    directions: "Get Directions",
     location: "Location",
-    locationDesc: "All our stores on the map",
+    locationDesc: "All our points of sale on the map",
     inMaintenance: "Under maintenance",
-    openStores: "Open stores",
+    openStores: "Open Points of Sale",
     needHelp: "Need help?",
     needHelpDesc: "Our team is here to assist you",
-    contactUs: "Contact us",
-    followUs: "Follow us",
+    contactUs: "Contact Us",
+    followUs: "Follow Us",
     rightsReserved: "© 2025 Taraji Store. All rights reserved.",
-    patienceMessage: "We are working hard to offer you a better experience",
-    backSoon: "We will be back soon!",
+    patienceMessage: "We’re working hard to offer you a better experience",
+    backSoon: "We’ll be back soon!",
     stores: {
       centreville: {
-        name: "Centre Ville Store",
-        address: "6, Avenue de Carthage, Tunis 1000",
+        name: "Centre Ville Point of Sale",
+        address: "6, Carthage Avenue, Tunis 1000",
       },
       lepassage: {
-        name: "Le Passage Store",
-        address: "52, Rue de Paris, Tunis",
+        name: "Le Passage Point of Sale",
+        address: "52, Paris Street, Tunis",
       },
       menzah5: {
-        name: "Boutique du Menzah 5",
-        address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
+        name: "Menzah 5 Point of Sale",
+        address: "Africa Avenue, Menzah 5, Ariana 2091",
       },
       mourouj: {
-        name: "Boutique El Mourouj",
-        address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
+        name: "El Mourouj Point of Sale",
+        address: "20 March Street, El Mourouj, Tunis 2074",
       },
       aouina: {
-        name: "Boutique El Aouina",
+        name: "El Aouina Point of Sale",
         address: "5, Résidence Soltan, El Aouina, Tunis 4216",
       },
     },
-  },
+  }
   
 }
 
@@ -320,6 +322,7 @@ export default function MaintenancePage() {
     {
       name: t.stores.centreville.name,
       address: t.stores.centreville.address,
+      addressMap: t.stores.centreville.address,
       phone: "+216 93 691 919",
       distance: "2.5 km",
       status: t.open,
@@ -327,6 +330,7 @@ export default function MaintenancePage() {
     {
       name: t.stores.lepassage.name,
       address: t.stores.lepassage.address,
+      addressMap: t.stores.lepassage.address,
       phone: "+216 95 321 919",
       distance: "3.1 km",
       status: t.open,
@@ -334,13 +338,15 @@ export default function MaintenancePage() {
     {
       name: t.stores.menzah5.name,
       address: t.stores.menzah5.address,
+      addressMap: t.stores.menzah5.address,
       phone: "+216 92 861 919",
       distance: "4.2 km",
       status: t.open,
     },
-        {
+      {
       name: t.stores.mourouj.name,
       address: t.stores.mourouj.address,
+      addressMap: "P687+M56, Av. du 20 Mars 1956, El Mourouj",
       phone: "+216 94 871 919",
       distance: "7.5 km",
       status: t.open,
@@ -348,6 +354,7 @@ export default function MaintenancePage() {
     {
       name: t.stores.aouina.name,
       address: t.stores.aouina.address,
+      addressMap: t.stores.aouina.address,
       phone: "+216 98 813 918",
       distance: "10.1 km",
       status: t.open,
@@ -379,7 +386,7 @@ export default function MaintenancePage() {
         <div className="relative px-4 py-6">
           <div className="flex justify-center items-center max-w-sm mx-auto">
             <img
-              src="/images/taraji-store-logo.png"
+              src="/images/logo-taraji-store.png"
               alt="Taraji Store Logo"
               className="h-auto max-h-[80px] w-auto max-w-[260px] object-contain"
             />
@@ -535,7 +542,7 @@ export default function MaintenancePage() {
                         {t.call}
                       </Button>
                       <Button
-                        onClick={() => handleDirections(boutique.address)}
+                        onClick={() => handleDirections(boutique.addressMap)}
                         variant="outline"
                         className="flex-1 border-2 border-yellow-400 text-yellow-600 hover:bg-yellow-50 rounded-xl h-12 font-medium transition-all duration-200 hover:scale-105 active:scale-95"
                       >
@@ -653,6 +660,18 @@ export default function MaintenancePage() {
           </div>
         </div>
       </footer>
+      {/* Fixed WhatsApp Button */}
+      <a
+        href="https://wa.me/21693591919"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center w-16 h-16 transition-all duration-200"
+        aria-label="WhatsApp"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-8 h-8">
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.661 1.934 6.661L4 29l7.661-1.934A12.96 12.96 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.92-.52-5.61-1.51l-.4-.23-4.54 1.15 1.21-4.42-.26-.41A9.93 9.93 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.14c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.47-.61-.48-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.36-.26.28-1 1-.97 2.43.03 1.43 1.04 2.81 1.19 3 .15.19 2.05 3.14 5.01 4.28.7.24 1.25.38 1.68.49.71.18 1.36.16 1.87.1.57-.07 1.65-.67 1.89-1.32.23-.65.23-1.21.16-1.32-.07-.11-.25-.18-.53-.32z"/>
+        </svg>
+      </a>
     </div>
   )
 }
