@@ -165,19 +165,19 @@ interface Translations {
 
 const translations: Translations = {
   fr: {
-    maintenanceTitle: "🚧 La Boutique du Parc est temporairement fermée",
-    maintenanceMessage: "Notre boutique est actuellement en maintenance",
+    maintenanceTitle: "🚧 Le Point de Vente du Parc B est temporairement fermé",
+    maintenanceMessage: "Notre point de vente est actuellement en maintenance",
     maintenanceSubtitle: "Merci de votre patience",
     address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
-    nearbyStores: "Boutiques à proximité",
+    nearbyStores: "Points de vente à proximité",
     nearbyStoresDesc: "Trouvez nos autres points de vente ouverts",
-    open: "Ouverte",
+    open: "Ouvert",
     call: "Appeler",
     directions: "Itinéraire",
     location: "Localisation",
-    locationDesc: "Toutes nos boutiques sur la carte",
+    locationDesc: "Tous nos points de vente sur la carte",
     inMaintenance: "En maintenance",
-    openStores: "Ouvertes",
+    openStores: "Ouverts",
     needHelp: "Besoin d'aide ?",
     needHelpDesc: "Notre équipe est là pour vous accompagner",
     contactUs: "Nous contacter",
@@ -187,115 +187,117 @@ const translations: Translations = {
     backSoon: "Nous reviendrons bientôt !",
     stores: {
       centreville: {
-        name: "Boutique Centre Ville",
+        name: "Point de Vente Centre Ville",
         address: "6, Avenue de Carthage, Tunis 1000",
       },
       lepassage: {
-        name: "Boutique Le Passage",
+        name: "Point de Vente Le Passage",
         address: "52, Rue de Paris, Tunis",
       },
       menzah5: {
-        name: "Boutique du Menzah 5",
+        name: "Point de Vente du Menzah 5",
         address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
       },
       mourouj: {
-        name: "Boutique El Mourouj",
+        name: "Point de Vente El Mourouj",
         address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
       },
       aouina: {
-        name: "Boutique El Aouina",
+        name: "Point de Vente El Aouina",
         address: "5, Résidence Soltan, El Aouina, Tunis 4216",
       },
     },
   },
+
   ar: {
-    maintenanceTitle:"🚧 بوتيك الحديقة حالياً في فترة صيانة",
-    maintenanceMessage: "البوتيك مغلقة مؤقتاً للصيانة",
+    maintenanceTitle:"🚧 نقطة البيع متاع الحديقة ب حالياً في فترة صيانة",
+    maintenanceMessage: "نقطة البيع مسكّرة مؤقتاً للصيانة",
     maintenanceSubtitle: "شكراً على تفهّمكم وصبركم 🙏",
     address: "نهج العربيّة السعوديّة، مونبليزير، تونس 1073",
-    nearbyStores: "البوتيكات القريبة ليك",
+    nearbyStores: "نقاط البيع القريبة ليك",
     nearbyStoresDesc: "تنجم تلقى أقرب نقطة بيع مفتوحة",
     open: "مفتوحة",
     call: "إتصل بينا",
     directions: "شوف الطريق",
     location: "المكان",
-    locationDesc: "خريطة فيها جميع البوتيكات متاعنا",
+    locationDesc: "خريطة فيها جميع نقاط البيع متاعنا",
     inMaintenance: "في الصيانة",
-    openStores: "البوتيكات اللي تخدم",
+    openStores: "نقاط البيع اللي تخدم",
     needHelp: "تحتاجون لمزيد من التفاصيل؟",
     needHelpDesc: "الفريق متاعنا موجود ديما يعاونك",
     contactUs: "إتصل بينا توة",
     followUs: "تابعنا على صفحاتنا",
-    rightsReserved: "© 2025 بوتيك الترجي. جميع الحقوق محفوظة.",
+    rightsReserved: "© 2025 نقطة بيع الترجي. جميع الحقوق محفوظة.",
     patienceMessage: "نحضّرو في حاجة تفرّح و تليق بيكم ❤️",
     backSoon: "راجعينلكم قريب إن شاء الله !",
     stores: {
       centreville: {
-        name: "بوتيك وسط العاصمة",
+        name: "نقطة بيع وسط العاصمة",
         address: "6، شارع قرطاج، تونس 1000",
       },
       lepassage: {
-        name: "بوتيك الباساج",
+        name: "نقطة بيع الباساج",
         address: "52، شارع باريس، تونس",
       },
       menzah5: {
-        name: "بوتيك المنزه 5",
+        name: "نقطة بيع المنزه 5",
         address: "نهج إفريقيا، المنزه 5، أريانة 2091",
       },
       mourouj: {
-        name: "بوتيك المروج",
+        name: "نقطة بيع المروج",
         address: "شارع 20 مارس، المروج، تونس 2074",
       },
       aouina: {
-        name: "بوتيك العوينة",
+        name: "نقطة بيع العوينة",
         address: "إقامة سلطان 5، العوينة، تونس 4216",
       },
     },
   },
+
   en: {
-    maintenanceTitle: "🚧 The Parc Store is temporarily closed",
-    maintenanceMessage: "Our store is currently under maintenance",
+    maintenanceTitle: "🚧 The Park B Point of Sale is temporarily closed",
+    maintenanceMessage: "Our point of sale is currently under maintenance",
     maintenanceSubtitle: "Thank you for your patience",
-    address: "Avenue d'Arabie Saoudite, Montplaisir, Tunis 1073",
-    nearbyStores: "Nearby Stores",
-    nearbyStoresDesc: "Find our other open outlets",
+    address: "Avenue of Saudi Arabia, Montplaisir, Tunis 1073",
+    nearbyStores: "Nearby Points of Sale",
+    nearbyStoresDesc: "Find our other open points of sale",
     open: "Open",
     call: "Call",
-    directions: "Directions",
+    directions: "Get Directions",
     location: "Location",
-    locationDesc: "All our stores on the map",
+    locationDesc: "All our points of sale on the map",
     inMaintenance: "Under maintenance",
-    openStores: "Open stores",
+    openStores: "Open Points of Sale",
     needHelp: "Need help?",
     needHelpDesc: "Our team is here to assist you",
-    contactUs: "Contact us",
-    followUs: "Follow us",
+    contactUs: "Contact Us",
+    followUs: "Follow Us",
     rightsReserved: "© 2025 Taraji Store. All rights reserved.",
-    patienceMessage: "We are working hard to offer you a better experience",
-    backSoon: "We will be back soon!",
+    patienceMessage: "We’re working hard to offer you a better experience",
+    backSoon: "We’ll be back soon!",
     stores: {
       centreville: {
-        name: "Centre Ville Store",
-        address: "6, Avenue de Carthage, Tunis 1000",
+        name: "Centre Ville Point of Sale",
+        address: "6, Carthage Avenue, Tunis 1000",
       },
       lepassage: {
-        name: "Le Passage Store",
-        address: "52, Rue de Paris, Tunis",
+        name: "Le Passage Point of Sale",
+        address: "52, Paris Street, Tunis",
       },
       menzah5: {
-        name: "Boutique du Menzah 5",
-        address: "Avenue d’Afrique, Menzah 5, Ariana 2091",
+        name: "Menzah 5 Point of Sale",
+        address: "Africa Avenue, Menzah 5, Ariana 2091",
       },
       mourouj: {
-        name: "Boutique El Mourouj",
-        address: "Rue du 20 Mars, El Mourouj, Tunis 2074",
+        name: "El Mourouj Point of Sale",
+        address: "20 March Street, El Mourouj, Tunis 2074",
       },
       aouina: {
-        name: "Boutique El Aouina",
+        name: "El Aouina Point of Sale",
         address: "5, Résidence Soltan, El Aouina, Tunis 4216",
       },
     },
-  },
+  }
   
 }
 
@@ -320,6 +322,7 @@ export default function MaintenancePage() {
     {
       name: t.stores.centreville.name,
       address: t.stores.centreville.address,
+      addressMap: t.stores.centreville.address,
       phone: "+216 93 691 919",
       distance: "2.5 km",
       status: t.open,
@@ -327,6 +330,7 @@ export default function MaintenancePage() {
     {
       name: t.stores.lepassage.name,
       address: t.stores.lepassage.address,
+      addressMap: t.stores.lepassage.address,
       phone: "+216 95 321 919",
       distance: "3.1 km",
       status: t.open,
@@ -334,13 +338,15 @@ export default function MaintenancePage() {
     {
       name: t.stores.menzah5.name,
       address: t.stores.menzah5.address,
+      addressMap: t.stores.menzah5.address,
       phone: "+216 92 861 919",
       distance: "4.2 km",
       status: t.open,
     },
-        {
+      {
       name: t.stores.mourouj.name,
       address: t.stores.mourouj.address,
+      addressMap: "P687+M56, Av. du 20 Mars 1956, El Mourouj",
       phone: "+216 94 871 919",
       distance: "7.5 km",
       status: t.open,
@@ -348,6 +354,7 @@ export default function MaintenancePage() {
     {
       name: t.stores.aouina.name,
       address: t.stores.aouina.address,
+      addressMap: t.stores.aouina.address,
       phone: "+216 98 813 918",
       distance: "10.1 km",
       status: t.open,
@@ -535,7 +542,7 @@ export default function MaintenancePage() {
                         {t.call}
                       </Button>
                       <Button
-                        onClick={() => handleDirections(boutique.address)}
+                        onClick={() => handleDirections(boutique.addressMap)}
                         variant="outline"
                         className="flex-1 border-2 border-yellow-400 text-yellow-600 hover:bg-yellow-50 rounded-xl h-12 font-medium transition-all duration-200 hover:scale-105 active:scale-95"
                       >
