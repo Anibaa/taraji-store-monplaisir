@@ -386,7 +386,7 @@ export default function MaintenancePage() {
         <div className="relative px-4 py-6">
           <div className="flex justify-center items-center max-w-sm mx-auto">
             <img
-              src="/images/taraji-store-logo.png"
+              src="/images/logo-taraji-store.png"
               alt="Taraji Store Logo"
               className="h-auto max-h-[80px] w-auto max-w-[260px] object-contain"
             />
